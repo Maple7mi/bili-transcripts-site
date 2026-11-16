@@ -1,0 +1,172 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>专辑录播台 · 直播文字稿</title>
+<style>
+:root{--bg:#0d1117;--fg:#e6edf3;--dim:#8b949e;--line:#21262d;--acc:#58a6ff;--card:#161b22}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+header{position:sticky;top:0;z-index:9;background:rgba(13,17,23,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+header h1{font-size:16px;margin:0;font-weight:600}
+header .meta{color:var(--dim);font-size:12px}
+main{max-width:1000px;margin:0 auto;padding:16px}
+.searchbox{flex:1;min-width:220px}
+input[type=search]{width:100%;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--fg);font-size:14px;outline:none}
+input[type=search]:focus{border-color:var(--acc)}
+.months{display:grid;gap:18px;margin-top:8px}
+.month h2{font-size:14px;color:var(--dim);font-weight:600;margin:0 0 8px;letter-spacing:.04em}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:block}
+.day:hover{border-color:var(--acc);text-decoration:none}
+.day b{display:block;font-size:15px;color:var(--fg);font-weight:600}
+.day span{color:var(--dim);font-size:12px}
+.video{margin:22px 0 6px}
+.video h2{font-size:16px;margin:0 0 6px}
+.video .sub{color:var(--dim);font-size:12px}
+.parts{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.parts a{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px;color:var(--fg)}
+.min{margin:14px 0 0;border-left:2px solid var(--line);padding-left:12px}
+.min .t{color:var(--dim);font-size:12px;font-variant-numeric:tabular-nums}
+.ln{margin:2px 0;display:flex;gap:10px;align-items:baseline}
+.ln a{font-size:12px;color:var(--dim);font-variant-numeric:tabular-nums;flex:0 0 auto}
+.ln a:hover{color:var(--acc)}
+.ln span{flex:1}
+.hide{display:none!important}
+.result{padding:8px 0;border-bottom:1px solid var(--line)}
+.result .where{color:var(--dim);font-size:12px}
+mark{background:#3b2f00;color:#ffd866;border-radius:3px;padding:0 1px}
+.status{color:var(--dim);font-size:13px;padding:8px 0}
+footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
+</style></head><body>
+<header><h1>专辑录播台 · 直播文字稿</h1>
+  <div class="searchbox"><input type="search" id="q" placeholder="全站搜索（如 宝贝 / 兰姐 / 大招）" autocomplete="off"></div>
+  <div class="meta">83 天 · 131,992 句 · 201.9 万字</div></header>
+<main>
+  <div id="hits" class="hide"></div>
+  <div id="browse"><div class="status">按日期浏览（新的在上）</div><div class="months">
+  <section class="month"><h2>2026-11 · 14 天</h2><div class="days">
+  <a class="day" href="days/2026-11-15.html"><b>15 日</b><span>2139 句 · 37k 字</span></a>
+  <a class="day" href="days/2026-11-14.html"><b>14 日</b><span>2545 句 · 41k 字</span></a>
+  <a class="day" href="days/2026-11-13.html"><b>13 日</b><span>1687 句 · 25k 字</span></a>
+  <a class="day" href="days/2026-11-12.html"><b>12 日</b><span>2162 句 · 42k 字</span></a>
+  <a class="day" href="days/2026-11-11.html"><b>11 日</b><span>1005 句 · 16k 字</span></a>
+  <a class="day" href="days/2026-11-09.html"><b>09 日</b><span>2116 句 · 37k 字</span></a>
+  <a class="day" href="days/2026-11-08.html"><b>08 日</b><span>1781 句 · 30k 字</span></a>
+  <a class="day" href="days/2026-11-07.html"><b>07 日</b><span>2638 句 · 39k 字</span></a>
+  <a class="day" href="days/2026-11-06.html"><b>06 日</b><span>1158 句 · 16k 字</span></a>
+  <a class="day" href="days/2026-11-05.html"><b>05 日</b><span>2479 句 · 39k 字</span></a>
+  <a class="day" href="days/2026-11-04.html"><b>04 日</b><span>1886 句 · 32k 字</span></a>
+  <a class="day" href="days/2026-11-03.html"><b>03 日</b><span>1318 句 · 20k 字</span></a>
+  <a class="day" href="days/2026-11-02.html"><b>02 日</b><span>1652 句 · 28k 字</span></a>
+  <a class="day" href="days/2026-11-01.html"><b>01 日</b><span>1902 句 · 29k 字</span></a>
+  </div></section>
+
+  <section class="month"><h2>2026-10 · 31 天</h2><div class="days">
+  <a class="day" href="days/2026-10-31.html"><b>31 日</b><span>1058 句 · 17k 字</span></a>
+  <a class="day" href="days/2026-10-30.html"><b>30 日</b><span>1729 句 · 25k 字</span></a>
+  <a class="day" href="days/2026-10-29.html"><b>29 日</b><span>1781 句 · 26k 字</span></a>
+  <a class="day" href="days/2026-10-28.html"><b>28 日</b><span>2179 句 · 32k 字</span></a>
+  <a class="day" href="days/2026-10-27.html"><b>27 日</b><span>1125 句 · 16k 字</span></a>
+  <a class="day" href="days/2026-10-26.html"><b>26 日</b><span>1372 句 · 22k 字</span></a>
+  <a class="day" href="days/2026-10-25.html"><b>25 日</b><span>2052 句 · 31k 字</span></a>
+  <a class="day" href="days/2026-10-24.html"><b>24 日</b><span>2054 句 · 35k 字</span></a>
+  <a class="day" href="days/2026-10-23.html"><b>23 日</b><span>85 句 · 1k 字</span></a>
+  <a class="day" href="days/2026-10-22.html"><b>22 日</b><span>2024 句 · 32k 字</span></a>
+  <a class="day" href="days/2026-10-21.html"><b>21 日</b><span>2056 句 · 30k 字</span></a>
+  <a class="day" href="days/2026-10-20.html"><b>20 日</b><span>450 句 · 6k 字</span></a>
+  <a class="day" href="days/2026-10-19.html"><b>19 日</b><span>1456 句 · 23k 字</span></a>
+  <a class="day" href="days/2026-10-18.html"><b>18 日</b><span>2629 句 · 40k 字</span></a>
+  <a class="day" href="days/2026-10-17.html"><b>17 日</b><span>1950 句 · 30k 字</span></a>
+  <a class="day" href="days/2026-10-16.html"><b>16 日</b><span>1220 句 · 19k 字</span></a>
+  <a class="day" href="days/2026-10-15.html"><b>15 日</b><span>1970 句 · 28k 字</span></a>
+  <a class="day" href="days/2026-10-14.html"><b>14 日</b><span>2788 句 · 43k 字</span></a>
+  <a class="day" href="days/2026-10-13.html"><b>13 日</b><span>1848 句 · 27k 字</span></a>
+  <a class="day" href="days/2026-10-12.html"><b>12 日</b><span>1545 句 · 25k 字</span></a>
+  <a class="day" href="days/2026-10-11.html"><b>11 日</b><span>1730 句 · 28k 字</span></a>
+  <a class="day" href="days/2026-10-10.html"><b>10 日</b><span>1589 句 · 24k 字</span></a>
+  <a class="day" href="days/2026-10-09.html"><b>09 日</b><span>2048 句 · 35k 字</span></a>
+  <a class="day" href="days/2026-10-08.html"><b>08 日</b><span>925 句 · 15k 字</span></a>
+  <a class="day" href="days/2026-10-07.html"><b>07 日</b><span>1524 句 · 20k 字</span></a>
+  <a class="day" href="days/2026-10-06.html"><b>06 日</b><span>1561 句 · 24k 字</span></a>
+  <a class="day" href="days/2026-10-05.html"><b>05 日</b><span>1742 句 · 26k 字</span></a>
+  <a class="day" href="days/2026-10-04.html"><b>04 日</b><span>2378 句 · 30k 字</span></a>
+  <a class="day" href="days/2026-10-03.html"><b>03 日</b><span>1094 句 · 16k 字</span></a>
+  <a class="day" href="days/2026-10-02.html"><b>02 日</b><span>2035 句 · 29k 字</span></a>
+  <a class="day" href="days/2026-10-01.html"><b>01 日</b><span>1476 句 · 24k 字</span></a>
+  </div></section>
+
+  <section class="month"><h2>2026-09 · 25 天</h2><div class="days">
+  <a class="day" href="days/2026-09-30.html"><b>30 日</b><span>1488 句 · 21k 字</span></a>
+  <a class="day" href="days/2026-09-29.html"><b>29 日</b><span>724 句 · 11k 字</span></a>
+  <a class="day" href="days/2026-09-28.html"><b>28 日</b><span>1646 句 · 23k 字</span></a>
+  <a class="day" href="days/2026-09-26.html"><b>26 日</b><span>2723 句 · 40k 字</span></a>
+  <a class="day" href="days/2026-09-25.html"><b>25 日</b><span>2196 句 · 33k 字</span></a>
+  <a class="day" href="days/2026-09-24.html"><b>24 日</b><span>1710 句 · 24k 字</span></a>
+  <a class="day" href="days/2026-09-23.html"><b>23 日</b><span>2073 句 · 29k 字</span></a>
+  <a class="day" href="days/2026-09-20.html"><b>20 日</b><span>1562 句 · 23k 字</span></a>
+  <a class="day" href="days/2026-09-19.html"><b>19 日</b><span>740 句 · 11k 字</span></a>
+  <a class="day" href="days/2026-09-18.html"><b>18 日</b><span>1492 句 · 21k 字</span></a>
+  <a class="day" href="days/2026-09-17.html"><b>17 日</b><span>822 句 · 13k 字</span></a>
+  <a class="day" href="days/2026-09-16.html"><b>16 日</b><span>690 句 · 10k 字</span></a>
+  <a class="day" href="days/2026-09-15.html"><b>15 日</b><span>1200 句 · 14k 字</span></a>
+  <a class="day" href="days/2026-09-14.html"><b>14 日</b><span>1295 句 · 16k 字</span></a>
+  <a class="day" href="days/2026-09-13.html"><b>13 日</b><span>1152 句 · 14k 字</span></a>
+  <a class="day" href="days/2026-09-12.html"><b>12 日</b><span>1513 句 · 21k 字</span></a>
+  <a class="day" href="days/2026-09-11.html"><b>11 日</b><span>1443 句 · 20k 字</span></a>
+  <a class="day" href="days/2026-09-10.html"><b>10 日</b><span>1292 句 · 16k 字</span></a>
+  <a class="day" href="days/2026-09-09.html"><b>09 日</b><span>3044 句 · 43k 字</span></a>
+  <a class="day" href="days/2026-09-07.html"><b>07 日</b><span>1126 句 · 17k 字</span></a>
+  <a class="day" href="days/2026-09-06.html"><b>06 日</b><span>2081 句 · 30k 字</span></a>
+  <a class="day" href="days/2026-09-04.html"><b>04 日</b><span>1281 句 · 17k 字</span></a>
+  <a class="day" href="days/2026-09-03.html"><b>03 日</b><span>1488 句 · 25k 字</span></a>
+  <a class="day" href="days/2026-09-02.html"><b>02 日</b><span>1190 句 · 16k 字</span></a>
+  <a class="day" href="days/2026-09-01.html"><b>01 日</b><span>1845 句 · 25k 字</span></a>
+  </div></section>
+
+  <section class="month"><h2>2026-08 · 13 天</h2><div class="days">
+  <a class="day" href="days/2026-08-31.html"><b>31 日</b><span>1050 句 · 15k 字</span></a>
+  <a class="day" href="days/2026-08-30.html"><b>30 日</b><span>1124 句 · 16k 字</span></a>
+  <a class="day" href="days/2026-08-29.html"><b>29 日</b><span>1313 句 · 23k 字</span></a>
+  <a class="day" href="days/2026-08-28.html"><b>28 日</b><span>1313 句 · 22k 字</span></a>
+  <a class="day" href="days/2026-08-27.html"><b>27 日</b><span>1700 句 · 28k 字</span></a>
+  <a class="day" href="days/2026-08-25.html"><b>25 日</b><span>1489 句 · 24k 字</span></a>
+  <a class="day" href="days/2026-08-24.html"><b>24 日</b><span>1045 句 · 17k 字</span></a>
+  <a class="day" href="days/2026-08-23.html"><b>23 日</b><span>895 句 · 14k 字</span></a>
+  <a class="day" href="days/2026-08-22.html"><b>22 日</b><span>2362 句 · 46k 字</span></a>
+  <a class="day" href="days/2026-08-21.html"><b>21 日</b><span>1604 句 · 30k 字</span></a>
+  <a class="day" href="days/2026-08-20.html"><b>20 日</b><span>737 句 · 11k 字</span></a>
+  <a class="day" href="days/2026-08-19.html"><b>19 日</b><span>925 句 · 16k 字</span></a>
+  <a class="day" href="days/2026-08-18.html"><b>18 日</b><span>678 句 · 14k 字</span></a>
+  </div></section></div></div>
+</main>
+<footer>文字来自 B 站自动字幕（AI），已剔除歌词与游戏内语音，适合检索定位，不适合逐字引用。</footer>
+<script>
+const $=s=>document.querySelector(s), hits=$('#hits'), browse=$('#browse'), q=$('#q');
+let data=null, loading=false;
+const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const hh=s=>Math.floor(s/3600)+':'+String(Math.floor(s/60)%60).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+async function load(){
+  if(data||loading)return; loading=true; hits.innerHTML='<div class="status">正在加载索引…</div>';
+  const r=await fetch('data/search.json'); const j=await r.json(); data=j; loading=false;
+  run();
+}
+function run(){
+  const terms=q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  if(!terms.length){hits.classList.add('hide');browse.classList.remove('hide');return;}
+  if(!data){load();return;}
+  browse.classList.add('hide'); hits.classList.remove('hide');
+  const out=[]; let n=0;
+  for(const row of data.rows){
+    const t=row[3].toLowerCase();
+    if(terms.every(x=>t.includes(x))){ n++;
+      if(out.length<300){
+        let h=esc(row[3]);
+        for(const term of terms) if(term) h=h.replace(new RegExp('('+term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>');
+        const d=data.dates[row[0]];
+        out.push('<div class="result"><div class="where">'+d+' · P'+row[1]+' · <a href="https://www.bilibili.com/video/'+row[4]+'?p='+row[1]+'&t='+row[2]+'" target="_blank">'+hh(row[2])+' ↗</a></div><div>'+h+'</div></div>');
+      }
+    }
+  }
+  hits.innerHTML='<div class="status">命中 '+n+' 句'+(n>300?'（显示前 300）':'')+'</div>'+out.join('');
+}
+q.addEventListener('input',run);
+</script></body></html>

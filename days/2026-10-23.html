@@ -1,49 +1,65 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>2026-10-23 · 直播文字稿</title>
 <style>
-:root{--bg:#0d1117;--fg:#e6edf3;--dim:#8b949e;--line:#21262d;--acc:#58a6ff;--card:#161b22}
+:root{--bg:#0a0b0a;--fg:#c9d1c9;--dim:#5c6b5e;--line:#1b201b;--acc:#3fb950;--card:#0d100d;--hi:#7ee787}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
-a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
-header{position:sticky;top:0;z-index:9;background:rgba(13,17,23,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-header h1{font-size:16px;margin:0;font-weight:600}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;
+  font:14px/1.75 "Cascadia Code","Consolas","SF Mono",ui-monospace,"Microsoft YaHei",monospace}
+::selection{background:#1f3d24;color:#eafff0}
+a{color:var(--acc);text-decoration:none}
+a:hover{color:var(--hi);text-decoration:none}
+header{position:sticky;top:0;z-index:9;background:#0a0b0a;border-bottom:1px solid var(--line);padding:11px 18px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header h1{font-size:15px;margin:0;font-weight:600;color:#e8efe8;letter-spacing:.02em}
+header h1::before{content:"> ";color:var(--acc)}
 header .meta{color:var(--dim);font-size:12px}
-main{max-width:1000px;margin:0 auto;padding:16px}
-.searchbox{flex:1;min-width:220px}
-input[type=search]{width:100%;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--fg);font-size:14px;outline:none}
-input[type=search]:focus{border-color:var(--acc)}
-.months{display:grid;gap:18px;margin-top:8px}
-.month h2{font-size:14px;color:var(--dim);font-weight:600;margin:0 0 8px;letter-spacing:.04em}
-.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
-.day{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:block}
-.day:hover{border-color:var(--acc);text-decoration:none}
-.day b{display:block;font-size:15px;color:var(--fg);font-weight:600}
-.day span{color:var(--dim);font-size:12px}
-.video{margin:22px 0 6px}
-.video h2{font-size:16px;margin:0 0 6px}
-.video .sub{color:var(--dim);font-size:12px}
-.parts{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
-.parts a{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px;color:var(--fg)}
-.min{margin:14px 0 0;border-left:2px solid var(--line);padding-left:12px}
-.min .t{color:var(--dim);font-size:12px;font-variant-numeric:tabular-nums}
-.ln{margin:2px 0;display:flex;gap:10px;align-items:baseline}
-.ln a{font-size:12px;color:var(--dim);font-variant-numeric:tabular-nums;flex:0 0 auto}
-.ln a:hover{color:var(--acc)}
-.ln span{flex:1}
+main{max-width:980px;margin:0 auto;padding:18px}
+.searchbox{flex:1;min-width:240px}
+input[type=search]{width:100%;padding:8px 10px;border-radius:0;border:1px solid var(--line);background:var(--card);color:var(--fg);font:inherit;font-size:13px;outline:none;caret-color:var(--acc)}
+input[type=search]::placeholder{color:#3f4a41}
+input[type=search]:focus{border-color:#2f6b39;background:#0b0e0b}
+.nav{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;font-size:12.5px;padding:2px 0 20px;color:var(--dim)}
+.nav>*:last-child{text-align:right}
+.nav a{color:var(--dim)}
+.nav a:hover{color:var(--acc)}
+.months{display:grid;gap:24px;margin-top:6px}
+.month h2{font-size:12px;color:var(--dim);font-weight:600;margin:0 0 10px;letter-spacing:.08em}
+.month h2::before{content:"## ";color:#33503a}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:0;padding:9px 11px;display:block}
+.day:hover{border-color:#2f6b39;background:#0e120e;text-decoration:none}
+.day b{display:block;font-size:13.5px;color:#dfe7df;font-weight:600;letter-spacing:.02em}
+.day span{color:var(--dim);font-size:11.5px}
+.video{margin:30px 0 4px}
+.video h2{font-size:14px;font-weight:600;margin:0 0 6px;color:#e8efe8;line-height:1.55}
+.video .sub{color:var(--dim);font-size:11.5px}
+.parts{display:flex;gap:6px;flex-wrap:wrap;margin:11px 0 2px}
+.parts a{background:transparent;border:1px solid var(--line);border-radius:0;padding:2px 9px;font-size:11.5px;color:#8fa392}
+.parts a:hover{border-color:#2f6b39;color:var(--hi)}
+.min{margin:18px 0 0}
+.min .t{color:var(--acc);font-size:12px;font-variant-numeric:tabular-nums;margin-bottom:6px;letter-spacing:.03em}
+.min .t::before{content:"# "}
+.ln{margin:1px 0;display:flex;gap:11px;align-items:baseline}
+.ln a{font-size:11.5px;color:var(--dim);font-variant-numeric:tabular-nums;flex:0 0 auto;min-width:72px}
+.ln a::before{content:"[";opacity:.4}
+.ln a::after{content:"]";opacity:.4}
+.ln span{flex:1;min-width:0}
+.ln:hover a{color:var(--acc)}
+.ln:hover span{color:#f0f7f0}
 .hide{display:none!important}
-.result{padding:8px 0;border-bottom:1px solid var(--line)}
-.result .where{color:var(--dim);font-size:12px}
-mark{background:#3b2f00;color:#ffd866;border-radius:3px;padding:0 1px}
-.status{color:var(--dim);font-size:13px;padding:8px 0}
-footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
+.result{padding:9px 0;border-bottom:1px dashed var(--line)}
+.result .where{color:var(--dim);font-size:11.5px;margin-bottom:2px}
+mark{background:#173d1f;color:#8ff0a4;padding:0 1px}
+.status{color:var(--dim);font-size:12px;padding:8px 0}
+footer{color:#4b5850;font-size:11.5px;text-align:center;padding:36px 18px 60px;border-top:1px dashed var(--line);margin:44px 18px 0}
 </style></head><body>
 <header><h1>2026-10-23</h1><div class="searchbox"><input type="search" id="q" placeholder="本日搜索" autocomplete="off"></div>
 <div class="meta">146 句 · 981 字</div></header>
-<main><div style="display:flex;justify-content:space-between;font-size:13px"><a href="2026-10-22.html">← 2026-10-22</a><a href="../index.html">全部日期</a><a href="2026-10-24.html">2026-10-24 →</a></div><div id="hits" class="hide"></div><div id="body"><section class="video"><h2>专辑 2026-10-23直播录像|直播回放|录播 - 挑战赛求您疼我</h2>
+<main><div class="nav"><a href="2026-10-22.html">← 2026-10-22</a><a href="../index.html">全部日期</a><a href="2026-10-24.html">2026-10-24 →</a></div><div id="hits" class="hide"></div><div id="body"><section class="video"><h2>专辑 2026-10-23直播录像|直播回放|录播 - 挑战赛求您疼我</h2>
 <div class="sub"><a href="https://www.bilibili.com/video/BV1ment6LENy" target="_blank">BV1ment6LENy ↗</a> · 1 个分P</div>
 <div class="parts"><a href="#p1">P1</a></div>
 <div id="p1">
-<div class="min" data-m="0"><div class="t">0:00:</div>
+<div class="min" data-m="0"><div class="t">0:00</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=0" target="_blank">0:00:00</a><span>直接kss解了六十个v你想要还有闪烁星河</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=2" target="_blank">0:00:02</a><span>等一下</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=3" target="_blank">0:00:03</a><span>我拿个手机看一下</span></div>
@@ -65,7 +81,7 @@ footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=59" target="_blank">0:00:59</a><span>说的好呀</span></div>
 </div>
 
-<div class="min" data-m="1"><div class="t">0:01:</div>
+<div class="min" data-m="1"><div class="t">0:01</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=60" target="_blank">0:01:00</a><span>牛魔等下充个电</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=64" target="_blank">0:01:04</a><span>手机没电了</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=66" target="_blank">0:01:06</a><span>谢谢欢迎春的春</span></div>
@@ -93,7 +109,7 @@ footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=119" target="_blank">0:01:59</a><span>去别人直播间给我抢威尼闪友哦</span></div>
 </div>
 
-<div class="min" data-m="2"><div class="t">0:02:</div>
+<div class="min" data-m="2"><div class="t">0:02</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=121" target="_blank">0:02:01</a><span>抢个小鱼姬</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=124" target="_blank">0:02:04</a><span>我太感动了</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=125" target="_blank">0:02:05</a><span>宝贝</span></div>
@@ -108,7 +124,7 @@ footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=173" target="_blank">0:02:53</a><span>终有声这边是红开的谣言</span></div>
 </div>
 
-<div class="min" data-m="3"><div class="t">0:03:</div>
+<div class="min" data-m="3"><div class="t">0:03</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=201" target="_blank">0:03:21</a><span>哪有真评句</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=202" target="_blank">0:03:22</a><span>只随他人到长短</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=206" target="_blank">0:03:26</a><span>小心点</span></div>
@@ -119,7 +135,7 @@ footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=237" target="_blank">0:03:57</a><span>收到收到</span></div>
 </div>
 
-<div class="min" data-m="4"><div class="t">0:04:</div>
+<div class="min" data-m="4"><div class="t">0:04</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=266" target="_blank">0:04:26</a><span>门正在冷</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=270" target="_blank">0:04:30</a><span>没拉到</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=278" target="_blank">0:04:38</a><span>给打野吃吧</span></div>
@@ -128,7 +144,7 @@ footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=299" target="_blank">0:04:59</a><span>那江边收到云雾散</span></div>
 </div>
 
-<div class="min" data-m="5"><div class="t">0:05:</div>
+<div class="min" data-m="5"><div class="t">0:05</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=304" target="_blank">0:05:04</a><span>被发现了</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=316" target="_blank">0:05:16</a><span>队友好和善呀</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=318" target="_blank">0:05:18</a><span>多么的谦让</span></div>
@@ -143,7 +159,7 @@ footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=357" target="_blank">0:05:57</a><span>团队呀</span></div>
 </div>
 
-<div class="min" data-m="6"><div class="t">0:06:</div>
+<div class="min" data-m="6"><div class="t">0:06</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=365" target="_blank">0:06:05</a><span>我要消失水灵车出镜</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=368" target="_blank">0:06:08</a><span>千里河畔唱天明</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=378" target="_blank">0:06:18</a><span>对面的法师有闪现吗</span></div>
@@ -154,14 +170,14 @@ footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=415" target="_blank">0:06:55</a><span>等一下中有声</span></div>
 </div>
 
-<div class="min" data-m="7"><div class="t">0:07:</div>
+<div class="min" data-m="7"><div class="t">0:07</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=421" target="_blank">0:07:01</a><span>您将将注完了呀</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=442" target="_blank">0:07:22</a><span>ihavebeenslam现醉随风起</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=449" target="_blank">0:07:29</a><span>何须记旁人</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=456" target="_blank">0:07:36</a><span>你也是收到收到</span></div>
 </div>
 
-<div class="min" data-m="8"><div class="t">0:08:</div>
+<div class="min" data-m="8"><div class="t">0:08</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=482" target="_blank">0:08:02</a><span>idoicecaver天青青</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=486" target="_blank">0:08:06</a><span>水盈灵</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=494" target="_blank">0:08:14</a><span>妈的</span></div>
@@ -176,7 +192,7 @@ footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=536" target="_blank">0:08:56</a><span>很大</span></div>
 </div>
 
-<div class="min" data-m="9"><div class="t">0:09:</div>
+<div class="min" data-m="9"><div class="t">0:09</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=553" target="_blank">0:09:13</a><span>我靠</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=556" target="_blank">0:09:16</a><span>你们是人类吗</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=557" target="_blank">0:09:17</a><span>大船稳住</span></div>
@@ -188,7 +204,7 @@ footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=599" target="_blank">0:09:59</a><span>感觉出球麻会很容易死啊</span></div>
 </div>
 
-<div class="min" data-m="10"><div class="t">0:10:</div>
+<div class="min" data-m="10"><div class="t">0:10</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=602" target="_blank">0:10:02</a><span>出半肉吧</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=603" target="_blank">0:10:03</a><span>半肉伤害也很高</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=612" target="_blank">0:10:12</a><span>分手</span></div>
@@ -199,7 +215,7 @@ footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=659" target="_blank">0:10:59</a><span>把经济给我行不行</span></div>
 </div>
 
-<div class="min" data-m="11"><div class="t">0:11:</div>
+<div class="min" data-m="11"><div class="t">0:11</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=666" target="_blank">0:11:06</a><span>燃起来了</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=672" target="_blank">0:11:12</a><span>请随拍六六六打的这个样子</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=679" target="_blank">0:11:19</a><span>还要吃兵线</span></div>
@@ -210,7 +226,7 @@ footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=708" target="_blank">0:11:48</a><span>晚舟</span></div>
 </div>
 
-<div class="min" data-m="12"><div class="t">0:12:</div>
+<div class="min" data-m="12"><div class="t">0:12</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=726" target="_blank">0:12:06</a><span>你说你吃那么多</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=727" target="_blank">0:12:07</a><span>都没有伤害</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=734" target="_blank">0:12:14</a><span>拉到你都打不死</span></div>
@@ -222,13 +238,13 @@ footer{color:var(--dim);font-size:12px;text-align:center;padding:30px 16px 50px}
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=762" target="_blank">0:12:42</a><span>何须自</span></div>
 </div>
 
-<div class="min" data-m="13"><div class="t">0:13:</div>
+<div class="min" data-m="13"><div class="t">0:13</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=788" target="_blank">0:13:08</a><span>方请那中击收到平地</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=801" target="_blank">0:13:21</a><span>我控他那么久大招已经好了</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=837" target="_blank">0:13:57</a><span>我的我的</span></div>
 </div>
 
-<div class="min" data-m="14"><div class="t">0:14:</div>
+<div class="min" data-m="14"><div class="t">0:14</div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=845" target="_blank">0:14:05</a><span>何须记旁人</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=849" target="_blank">0:14:09</a><span>对呀</span></div>
 <div class="ln"><a href="https://www.bilibili.com/video/BV1ment6LENy?p=1&t=861" target="_blank">0:14:21</a><span>对抗差距</span></div>
